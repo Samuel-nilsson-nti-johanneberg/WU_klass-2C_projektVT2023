@@ -5,6 +5,7 @@
 }
 
 body {
+    font-family: Arial, sans-serif;
     background-color: aliceblue;
 }
   
@@ -15,12 +16,18 @@ header{
     width: 100%;
 }
   
+h1 {
+    text-align: center;
+    color: #333;
+}
+  
 nav{
     display: flex;
     padding: 2% 6%;
     justify-content: flex-end;
     align-items: center;
     background-color: lightseagreen;
+    grid-area: na;
 }
   
 #link_list{
@@ -39,6 +46,7 @@ nav{
     justify-content: space-around;
     list-style: none;
     transition: all 0.5s;
+    z-index: 1;
 }
     
   
@@ -105,3 +113,425 @@ nav{
 .burger_in_x_form #burger_line_3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
+
+
+#gridwrapper1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 800px;
+    grid-template-areas: 
+    na
+    m1
+    m2
+    m3
+    m4
+    fo;
+}
+
+#grid_area1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#start_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#text_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#section2 {
+    grid-area: m2;
+    display: flex;
+
+}
+
+.img_section2 {
+    width: 300px;
+    height: auto;
+    align-items: center;
+    justify-content: center;    
+}
+
+
+
+
+
+
+/* Här kommer kod till kontaktsidan */
+
+  
+form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px #666;
+}
+  
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+  
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+  
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+  
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+
+
+
+#about_gridwrapper{
+    height: 100vh;
+    display: grid;
+  
+    grid-template-rows: 100px 800px 800px 800px minmax(400px, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "he he"
+    "ma ma"
+    "a1 a1"
+    "a2 a2"
+    "fo fo";
+}
+   
+.boxed {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    align-content: center;
+    list-style: none;
+    flex-direction: column;
+  
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.749);
+    width: 50%;
+    height: 75%;
+    margin: 10vh;
+}
+  
+  
+#aboutme {
+    grid-area:  ma;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+   
+    background-image: url('../img/tim.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+    height: 80vh;
+    width: 100%;
+}
+  
+#about_section1 {
+    grid-area: a1;
+    text-align: center;
+    display: flex;
+  
+    background-image: url('../img/tim.jpg');
+    background-size: cover;
+    background-position-y: center;
+    justify-content: center;
+    align-items: center;
+    
+    height: 80vh;
+    width: auto;
+}
+  
+#about_section2{
+    grid-area: a2;
+    text-align: center;
+    display: flex;
+    
+    background-image: url('../img/tim.jpg');
+    background-size: cover;
+    background-position-y: center;
+    justify-content: center;
+    align-items: center;
+    
+    height: 80vh;
+    width: auto;
+}
+  
+h1{
+    font-size: 25px;
+}
+  
+p {
+    font-size: 18px;
+}
+  
+footer {
+    grid-area: fo;
+    height: 20vh;
+    background-color: rgb(0, 0, 0);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    padding-top: 20px;
+}
+  
+.text_footer {
+    color: white;
+}
+
+/* koden nedan är till knappen som scrollar ner på kontaktsidan */
+
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+.scroll_section {
+  height: 100vh;
+  width: 100%;
+  display: table;
+}
+
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgb(0, 0, 0);
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 3px solid rgb(0, 0, 0);
+    border-width: 0px 0 2px 2px;
+}
+
+/* Denna koden är för att få skrolla ner knappen (på kontaktsidan) att hoppa upp och ner */
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+
+
+/* Här nedan kommer koden kopplad till slideshowen på portfoliosidan */
+
+.slideshow-container {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide1 {
+    background-image: url('/img/tim.jpg');
+  }
+  
+  .slide2 {
+    background-image: url('image2.jpg');
+  }
+  
+  .slide3 {
+    background-image: url('image3.jpg');
+  }
+  
+  .slide4 {
+    background-image: url('image4.jpg');
+  }
+  
+  .slide5 {
+    background-image: url('image5.jpg');
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slideshow-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  
+  .slideshow-nav a {
+    color: white;
+    font-size: 48px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .slideshow-nav a:hover {
+    opacity: 1;
+  }
+  
+  .slideshow-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 48px;
+    z-index: 1;
+  }
+  
+
+/* Här nedanför kommer koden kopplad till de olika gallerien på portfoliosidan */
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card {
+	margin: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+	width: 100%;
+	height: auto;
+}
+
+@media screen and (max-width: 600px) {
+	.card {
+		width: 90%;
+	}
+}
+
+/* Button styles */
+#button-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.gallery-button {
+	padding: 10px 20px;
+	margin: 0 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.gallery-button:hover {
+	background-color: #0056b3;
+}
+
+.card img {
+    max-width: 400px;
+    max-height: 400px;
+  }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div>
+    <header>
+        <nav>
+            <h1>Samuel Nilsson</h1>
+            
+                <ul id="link_list">
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="aboutme.html">About me</a></li>
+                </ul>
+                <div id="burger">
+                    <div id="burger_line_1"></div>
+                    <div id="burger_line_2"></div>
+                    <div id="burger_line_3"></div>
+                </div>
+        </nav>
+    </header>
+
+  </div>
+
+  <h1>Kontakta mig</h1>
+
+  <form action="submit-form.php" method="post">
+     
+      <label for="name">Namn:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">E-postadress:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="subject">Ämne:</label>
+      <input type="text" id="subject" name="subject"><br>
+
+      <label for="message">Meddelande:</label><br>
+      <textarea id="message" name="message" rows="5" cols="30" required></textarea><br>
+
+      <input type="submit" value="Skicka">
+    
+  </form>
+  
+  <script src="js/script.js"></script> 
+
+</body>
+</html>

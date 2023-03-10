@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div>
+        <header>
+            <nav>
+                <h1>Samuel Nilsson</h1>
+                
+                    <ul id="link_list">
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="aboutme.html">About me</a></li>
+                    </ul>
+                    <div id="burger">
+                        <div id="burger_line_1"></div>
+                        <div id="burger_line_2"></div>
+                        <div id="burger_line_3"></div>
+                    </div>
+            </nav>
+        </header>
+    
+    </div>
+
+    <section class="slideshow">
+        <div class="slideshow-container">
+            <div class="slide slide1"></div>
+            <div class="slide slide2"></div>
+            <div class="slide slide3"></div>
+            <div class="slide slide4"></div>
+            <div class="slide slide5"></div>
+            <div class="slideshow-nav">
+                <a class="prev" onclick="prevSlide()">&#10094;</a>
+                <a class="next" onclick="nextSlide()">&#10095;</a>
+            </div>
+            <div class="slideshow-text">
+                <h2>My Portfolio</h2>
+            </div>
+        </div>
+
+    </section>
+
+    <main>
+		<div id="gallery-container">
+			<section id="gallery1" class="gallery">
+				<div class="card">
+					<img src="/img/tim.jpg">
+				</div>
+				<div class="card">
+					<img src="/img/tim.jpg">
+				</div>
+				<div class="card">
+					<img src="/img/tim.jpg">
+				</div>
+			</section>
+			<section id="gallery2" class="gallery">
+				<div class="card">
+					<img src="image4.jpg">
+				</div>
+				<div class="card">
+					<img src="image5.jpg">
+				</div>
+				<div class="card">
+					<img src="image6.jpg">
+				</div>
+			</section>
+			<section id="gallery3" class="gallery">
+				<div class="card">
+					<img src="image7.jpg">
+				</div>
+				<div class="card">
+					<img src="image8.jpg">
+				</div>
+				<div class="card">
+					<img src="image9.jpg">
+				</div>
+			</section>
+		</div>
+		<div id="button-container">
+			<button class="gallery-button" data-gallery="gallery1">Gallery 1</button>
+			<button class="gallery-button" data-gallery="gallery2">Gallery 2</button>
+			<button class="gallery-button" data-gallery="gallery3">Gallery 3</button>
+		</div>
+	</main>
+	<script src="/js/script.js"></script>
+    
+</body>
+</html>
