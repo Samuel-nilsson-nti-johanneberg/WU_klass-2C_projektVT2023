@@ -1,60 +1,60 @@
 *{
-    margin: 0;
-    padding: 0;
-    background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: aliceblue;
+  font-family: Arial, sans-serif;
+  background-color: aliceblue;
 }
   
 header{
-    grid-area: he;
-    background-color: #bae3cd;
-    height: 100px;
-    width: 100%;
+  grid-area: he;
+  background-color: #bae3cd;
+  height: 100px;
+  width: 100%;
 }
   
 h1 {
-    text-align: center;
-    color: #333;
+  text-align: center;
+  color: #333;
 }
   
 nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: lightseagreen;
-    grid-area: na;
+  display: flex;
+  padding: 2% 6%;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: lightseagreen;
+  grid-area: na;
 }
   
 #link_list{
-    flex: 1;
-    text-align: right;
+  flex: 1;
+  text-align: right;
 
-    background-color: lightseagreen;
-    height: 400px;
-    width: 200px;
-    position: absolute;
-    top: -400px;
-    right: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    list-style: none;
-    transition: all 0.5s;
-    z-index: 1;
+  background-color: lightseagreen;
+  height: 400px;
+  width: 200px;
+  position: absolute;
+  top: -400px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  transition: all 0.5s;
+  z-index: 1;
 }
     
   
 #link_list li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
 }
   
 #link_list li a{
@@ -99,7 +99,8 @@ nav{
 }
 
 .link_list_visible {
-    transform: translateY(500px)
+    transform: translateY(500px);
+    background-image: url(/img/colorshift.gif);
 }
 
 .burger_in_x_form #burger_line_2 {
@@ -114,30 +115,39 @@ nav{
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-
+/* Denna koden nedanför är till för gridlayouten på min landing page */
 
 #gridwrapper1 {
     grid-template-columns: 1fr;
-    grid-template-rows: 500px 800px;
+    grid-template-rows: 500px 800px 800px 800px 800px 500px;
     grid-template-areas: 
-    na
-    m1
-    m2
-    m3
-    m4
-    fo;
+    na na
+    m1 m1
+    m2 m2
+    m3 m4
+    fo fo;
 }
 
 #grid_area1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  grid-area: m1;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('/img/Fjord1.jpg');
+  background-size: cover;
+  background-position-y: center;
+
+  height: 800px;
+  width: auto;
 }
 #start_buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 50%;
 }
 
 #text_buttons {
@@ -145,20 +155,59 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 40px;
 }
 
-#section2 {
+#text_buttons_h1 {
+  font-size: 40px;
+}
+
+#mainpage_area2 {
     grid-area: m2;
     display: flex;
-
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    margin: 100px;
+    padding: 0px;
 }
 
 .img_section2 {
-    width: 300px;
-    height: auto;
-    align-items: center;
-    justify-content: center;    
+    width: 400px;
+    height: 400px;
+  
 }
+
+#mainpage_area3 {
+  grid-area: m3;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('/img/Norrsken1.jpg');
+  background-size: cover;
+  background-position-y: center;
+
+  height: 400px;
+  width: auto;
+}
+
+#mainpage_area4 {
+  grid-area: m4;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('/img/Norrsken1.jpg');
+  background-size: cover;
+  background-position-y: center;
+
+  height: 400px;
+  width: auto;
+}
+
 
 
 
@@ -264,57 +313,56 @@ input[type="submit"]:hover {
 }
   
 #about_section1 {
-    grid-area: a1;
-    text-align: center;
-    display: flex;
+  grid-area: a1;
+  text-align: center;
+  display: flex;
   
-    background-image: url('../img/tim.jpg');
-    background-size: cover;
-    background-position-y: center;
-    justify-content: center;
-    align-items: center;
-    
-    height: 80vh;
-    width: auto;
+  background-image: url('../img/Vattenfall.jpeg');
+  background-size: cover;
+  background-position-y: center;
+  justify-content: center;
+  align-items: center;  
+  
+  height: 80vh;
+  width: auto;
 }
   
 #about_section2{
-    grid-area: a2;
-    text-align: center;
-    display: flex;
-    
-    background-image: url('../img/tim.jpg');
-    background-size: cover;
-    background-position-y: center;
-    justify-content: center;
-    align-items: center;
-    
-    height: 80vh;
-    width: auto;
+  grid-area: a2;
+  text-align: center;
+  display: flex;
+  
+  background-image: url('../img/Vattenfall.jpeg');  
+  background-size: cover;
+  background-position-y: center;
+  justify-content: center;
+  align-items: center; 
+  
+  height: 80vh;
+  width: auto;
 }
   
 h1{
-    font-size: 25px;
+  font-size: 25px;
 }
   
 p {
-    font-size: 18px;
+  font-size: 18px;
 }
   
 footer {
-    grid-area: fo;
-    height: 20vh;
-    background-color: rgb(0, 0, 0);
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-    padding-top: 20px;
+  grid-area: fo;
+  height: 20vh;
+  background-color: rgb(0, 0, 0); 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  padding-top: 20px;
 }
   
 .text_footer {
-    color: white;
+  color: white;
 }
 
 /* koden nedan är till knappen som scrollar ner på kontaktsidan */
@@ -420,15 +468,15 @@ footer {
   }
   
   .slide2 {
-    background-image: url('image2.jpg');
+    background-image: url('/img/jimmy.jpg');
   }
   
   .slide3 {
-    background-image: url('image3.jpg');
+    background-image: url('/img/gamledstad.jpg');
   }
   
   .slide4 {
-    background-image: url('image4.jpg');
+    background-image: url('/img/äggmacka.jpg');
   }
   
   .slide5 {
