@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body id="contact_gridwrapper">
   <div>
     <header>
         <nav>
@@ -28,26 +28,55 @@
     </header>
 
   </div>
-
+<!-- 
   <h1>Kontakta mig</h1>
+ -->
 
-  <form action="submit-form.php" method="post">
+
+<section id="contact_section1">
+    <section class="scroll-section">
+        <a href="#about_section1" class="scroll-down"></a>
+    </section>
+</section>
+
+<section id="contact_section2">
+  
+        <form class="boxed" action="submit-form.php" method="post">
      
-      <label for="name">Namn:</label>
-      <input type="text" id="name" name="name" required><br>
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name" required><br>
+      
+            <label for="email">E-postadress:</label>
+            <input type="email" id="email" name="email" required><br>
+      
+            <label for="subject">Ämne:</label>
+            <input type="text" id="subject" name="subject"><br>
+      
+            <label for="message">Meddelande:</label><br>
+            <textarea id="message" name="message" rows="5" cols="30" required></textarea><br>
+      
+            <input type="submit" value="Skicka">
+          
+        </form>
 
-      <label for="email">E-postadress:</label>
-      <input type="email" id="email" name="email" required><br>
+</section>
 
-      <label for="subject">Ämne:</label>
-      <input type="text" id="subject" name="subject"><br>
-
-      <label for="message">Meddelande:</label><br>
-      <textarea id="message" name="message" rows="5" cols="30" required></textarea><br>
-
-      <input type="submit" value="Skicka">
-    
-  </form>
+<footer>
+    <div>
+        <p class="text_footer">Kontaktuppgifter:</p>
+        <p class="text_footer">Adress: Origovägen 4 Göteborg</p>
+        <p class="text_footer">Telefon: 0731 555 559</p>
+        <p class="text_footer">Mail: SamuelNilsson@gmail.com</p>
+        <a href="contact.html"><p class="text_footer">Press here to read more.</p></a>
+    </div>
+    <div>
+        <p class="text_footer">Öppettider:</p>
+        <p class="text_footer">Måndag, Tisdag: 09-20</p>
+        <p class="text_footer">Onsdag, Torsdag: 09-21</p>
+        <p class="text_footer">Fredag, Lördag: 09-22</p>
+        <p class="text_footer">Söndag: 12-22</p>
+    </div>
+</footer>
   
   <script src="js/script.js"></script> 
 

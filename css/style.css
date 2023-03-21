@@ -128,18 +128,18 @@ nav{
     fo fo;
 }
 
-#grid_area1 {
+#mainpage_area1 {
   grid-area: m1;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
 
-  background-image: url('/img/Fjord1.jpg');
+  background-image: url('/img/Norrsken1.jpg');
   background-size: cover;
   background-position-y: center;
 
-  height: 800px;
+  height: 600px;
   width: auto;
 }
 #start_buttons {
@@ -189,7 +189,7 @@ nav{
   background-size: cover;
   background-position-y: center;
 
-  height: 400px;
+  height: 600px;
   width: auto;
 }
 
@@ -204,7 +204,7 @@ nav{
   background-size: cover;
   background-position-y: center;
 
-  height: 400px;
+  height: 600px;
   width: auto;
 }
 
@@ -259,57 +259,97 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
+#contact_gridwrapper{
+  height: 100vh;
+  display: grid;
+
+  grid-template-rows: 100px 80vh 80vh minmax(400px, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "he"
+  "ma"
+  "a1"
+  "fo";
+}
+
+#contact_section1 {
+  grid-area:  ma;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+ 
+  background-image: url('../img/tim.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  
+  height: 80vh;
+  width: 100%;
+}
+
+#contact_section2 {
+  grid-area: a1;
+  text-align: center;
+  display: flex;
+
+  background-image: url('../img/Vattenfall.jpeg');
+  background-size: cover;
+  background-position-y: center;
+  justify-content: center;
+  align-items: center;  
+
+  height: 80vh;
+  width: auto;
+}
 
 
 
-
-
-
+/* Här kommer kod kopplad till om mig (about.html) sidan */
 
 #about_gridwrapper{
-    height: 100vh;
-    display: grid;
+  height: 100vh;
+  display: grid;
   
-    grid-template-rows: 100px 800px 800px 800px minmax(400px, 1fr);
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "he he"
-    "ma ma"
-    "a1 a1"
-    "a2 a2"
-    "fo fo";
+  grid-template-rows: 100px 800px 800px 800px minmax(400px, 1fr);
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "he he"
+  "ma ma"
+  "a1 a1"
+  "a2 a2"
+  "fo fo";
 }
    
 .boxed {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
-    align-content: center;
-    list-style: none;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  align-content: center;
+  list-style: none;
+  flex-direction: column;
   
-    border: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.749);
-    width: 50%;
-    height: 75%;
-    margin: 10vh;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.749);
+  width: 50%;
+  height: 75%;
+  margin: 10vh;
 }
   
   
 #aboutme {
-    grid-area:  ma;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-   
-    background-image: url('../img/tim.jpg');
-    background-position: center;
-    background-size: cover;
-    position: relative;
+  grid-area: ma;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+ 
+  background-image: url('../img/tim.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
     
-    height: 80vh;
-    width: 100%;
+  height: 80vh;
+  width: 100%;
 }
   
 #about_section1 {
@@ -403,19 +443,19 @@ footer {
 }
 
 .scroll-down:before {
-    position: absolute;
-    top: calc(50% - 8px);
-    left: calc(50% - 6px);
-    transform: rotate(-45deg);
-    display: block;
-    width: 12px;
-    height: 12px;
-    content: "";
-    border: 3px solid rgb(0, 0, 0);
-    border-width: 0px 0 2px 2px;
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 3px solid rgb(0, 0, 0);
+  border-width: 0px 0 2px 2px;
 }
 
-/* Denna koden är för att få skrolla ner knappen (på kontaktsidan) att hoppa upp och ner */
+/* Denna koden är för att få skrolla ner knappen (på kontaktsidan och om mig-sidan) att hoppa upp och ner */
 
 @keyframes bounce {
   0%,
@@ -444,82 +484,82 @@ footer {
 /* Här nedan kommer koden kopplad till slideshowen på portfoliosidan */
 
 .slideshow-container {
-    position: relative;
-    height: 500px;
-    width: 100%;
-    overflow: hidden;
-  }
+  position: relative;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
   
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 500px;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
   
-  .slide1 {
-    background-image: url('/img/tim.jpg');
-  }
+.slide1 {
+  background-image: url('/img/tim.jpg');
+}
   
-  .slide2 {
-    background-image: url('/img/jimmy.jpg');
-  }
+.slide2 {
+  background-image: url('/img/jimmy.jpg');
+}
   
-  .slide3 {
-    background-image: url('/img/gamledstad.jpg');
-  }
+.slide3 {
+  background-image: url('/img/gamledstad.jpg');
+}
   
-  .slide4 {
-    background-image: url('/img/äggmacka.jpg');
-  }
+.slide4 {
+  background-image: url('/img/äggmacka.jpg');
+}
   
-  .slide5 {
-    background-image: url('image5.jpg');
-  }
+.slide5 {
+  background-image: url('image5.jpg');
+}
   
-  .slide.active {
-    opacity: 1;
-  }
+.slide.active {
+  opacity: 1;
+}
   
-  .slideshow-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-  }
+.slideshow-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
   
-  .slideshow-nav a {
-    color: white;
-    font-size: 48px;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 10px;
-    opacity: 0.7;
-    transition: opacity 0.3s ease-in-out;
-  }
+.slideshow-nav a {
+  color: white;
+  font-size: 48px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
   
-  .slideshow-nav a:hover {
-    opacity: 1;
-  }
+.slideshow-nav a:hover {
+  opacity: 1;
+}
   
-  .slideshow-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 48px;
-    z-index: 1;
-  }
+.slideshow-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  z-index: 1;
+}
   
 
 /* Här nedanför kommer koden kopplad till de olika gallerien på portfoliosidan */
@@ -580,6 +620,6 @@ body {
 }
 
 .card img {
-    max-width: 400px;
-    max-height: 400px;
-  }
+  max-width: 400px;
+  max-height: 400px;
+}
