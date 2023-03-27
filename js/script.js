@@ -32,7 +32,7 @@ galleryButtons.forEach(button => {
 
 
 
-
+// Här kommer koden till bildspelet på contact-sidan
 
 var slides = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'];
 var currentSlide = 0;
