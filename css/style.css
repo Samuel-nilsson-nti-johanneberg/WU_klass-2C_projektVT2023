@@ -127,10 +127,10 @@ nav{
   "na na"
   "m1 m1"
   "m2 m2"
-  "m3 m4"
+  "m3 m3"
   "fo fo";
 
-  background-color: #f3fff9;
+  background-color: #fffcf1;
 }
 
 #mainpage_area1 {
@@ -140,7 +140,7 @@ nav{
   align-items: center;
   justify-content: center;
 
-  background-image: url('/img/camera2_unsplash.jpg');
+  background-image: url('/img/camera1_unsplash.jpg');
   background-size: cover;
   background-position-y: center;
   background-position: center;
@@ -167,6 +167,12 @@ nav{
 
 #text_buttons_h1 {
   font-size: 40px;
+  color: #fff;
+  padding: 10px;
+}
+
+#text_buttons_p {
+  color: #fff;
 }
 
 #button_div {
@@ -197,10 +203,23 @@ nav{
   padding: 0px;
 }
 
-.img_section2 {
+.img_mainpage_area2 {
   width: 50vh;
   height: 50vh;
-  
+  background-position: center;
+  background-size: cover;
+}
+
+#mainpage_area2_img1 {
+  background-image: url(/img/mounatain3_unsplash.jpg);
+}
+
+#mainpage_area2_img2 {
+  background-image: url(/img/fjord3_unsplash.jpg);
+}
+
+#mainpage_area2_img3 {
+  background-image: url(/img/fjord5_unsplash.jpg);
 }
 
 #mainpage_area3 {
@@ -343,10 +362,10 @@ input[type="submit"]:hover {
 /* Här kommer kod kopplad till om mig (about.html) sidan */
 
 #about_gridwrapper{
-  height: 100vh;
+  /* height: 100vh; */
   display: grid;
   
-  grid-template-rows: 100px 800px 800px 800px minmax(400px, 1fr);
+  grid-template-rows: 100px 90vh 80vh 80vh minmax(20vh, 1fr);
   grid-template-columns: 1fr;
   grid-template-areas: 
   "he"
@@ -379,7 +398,7 @@ input[type="submit"]:hover {
   justify-content: center;
   align-items: center;
  
-  background-image: url('../img/tim.jpg');
+  background-image: url('../img/fjord3_unsplash.jpg');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -392,7 +411,7 @@ input[type="submit"]:hover {
   text-align: center;
   display: flex;
   
-  background-image: url('../img/Vattenfall.jpeg');
+  background-image: url('../img/mounatain3_unsplash.jpg');
   background-size: cover;
   background-position-y: center;
   justify-content: center;
@@ -406,7 +425,7 @@ input[type="submit"]:hover {
   text-align: center;
   display: flex;
   
-  background-image: url('../img/Vattenfall.jpeg');  
+  background-image: url('../img/mounatain3_unsplash.jpg');  
   background-size: cover;
   background-position-y: center;
   justify-content: center;
@@ -519,7 +538,7 @@ footer {
   height: 100vh;
   display: grid;
   
-  grid-template-rows: 100px 500px minmax(180vh, 200vh) minmax(400px, 1fr);
+  grid-template-rows: 100px 500px auto minmax(400px, 1fr);
   grid-template-columns: 1fr;
   grid-template-areas: 
   "he"
@@ -716,3 +735,126 @@ body {
 .gallery-button:hover {
 	background-color: #0056b3;
 } */
+
+
+
+
+/* Här kommer all kod för min mobillayout */
+
+@media only screen and (max-width: 800px) {
+  
+/* Småändringar i gridwrappers för att mobilanpassa sidan */
+
+  #gridwrapper1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 800px 800px 800px 800px 500px;
+    grid-template-areas: 
+    "na na"
+    "m1 m1"
+    "m2 m2"
+    "m3 m3"
+    "fo fo";
+
+    background-color: #fffcf1;
+  }
+
+  #contact_gridwrapper{
+    height: 100vh;
+    display: grid;
+  
+    grid-template-rows: 100px 80vh 80vh minmax(400px, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "he"
+    "ma"
+    "a1"
+    "fo";
+  }
+
+  #about_gridwrapper{
+    /* height: 100vh; */
+    display: grid;
+    
+    grid-template-rows: 100px 90vh 80vh 80vh minmax(20vh, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "he"
+    "ma"
+    "a1"
+    "a2"
+    "fo";
+  }
+
+  #portfolio_gridwrapper {
+    height: 100vh;
+    display: grid;
+    
+    grid-template-rows: 100px 500px auto minmax(400px, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "he"
+    "p1"
+    "p2"
+    "fo";
+  }
+
+
+  /* Ta bort hamburgarmenyn och gör om den till en meny längst upp på skärmen */
+
+  header{
+    grid-area: he;
+    background-color: #000000;
+    height: 100px;
+    width: 100%;
+  }
+    
+  nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    grid-area: na;
+  }
+    
+  #link_list{
+    flex: 1;
+    text-align: center;
+  
+    background-color: rgb(0, 0, 0);
+    height: 0px;
+    width: 0px;
+    position: sticky;
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    transition: all 0.5s;
+    z-index: 1;
+    
+    white-space: nowrap;
+  }
+  
+  #link_list li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1,25rem;
+  
+    letter-spacing: 0.1875rem;
+    color: rgb(255, 128, 0);
+  }
+  
+  #burger div {
+    display: none;
+  }
+  
+/* Övrigt */
+
+#portfolio_h2 {
+  font-size: 8vh;
+  white-space: nowrap;
+}
+  
+}
