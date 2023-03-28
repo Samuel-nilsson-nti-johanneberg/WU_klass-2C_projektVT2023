@@ -7,8 +7,10 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
 
+<body id="portfolio_gridwrapper">
+
+	
     <div>
         <header>
             <nav>
@@ -48,48 +50,57 @@
 
     </section>
 
-    <main>
+    <section id="gallery_section">
 		<div id="gallery-container">
-			<section id="gallery1" class="gallery">
-				<div class="card">
-					<img src="/img/tim.jpg">
-				</div>
-				<div class="card">
-					<img src="/img/tim.jpg">
-				</div>
-				<div class="card">
-					<img src="/img/tim.jpg">
-				</div>
-			</section>
-			<section id="gallery2" class="gallery">
-				<div class="card">
-					<img src="/img/jimmy.jpg">
-				</div>
-				<div class="card">
-					<img src="/img/jimmy.jpg">
-				</div>
-				<div class="card">
-					<img src="/img/jimmy.jpg">
-				</div>
-			</section>
-			<section id="gallery3" class="gallery">
-				<div class="card">
-					<img src="/img/Norrsken1.jpg">
-				</div>
-				<div class="card">
-					<img src="/img/Norrsken1.jpg">
-				</div>
-				<div class="card">
-					<img src="/img/Norrsken1.jpg">
-				</div>
+			<section class="gallery">
+				
+				<div class="card" id="card1"></div>
+
+				<div class="card" id="card2"></div>
+
+				<div class="card" id="card3"></div>
+
+				<div class="card" id="card4"></div>
+
+				<div class="card" id="card5"></div>
+				
+				<div class="card" id="card6"></div>
+
+				<div class="card" id="card7"></div>
+
+				<div class="card" id="card8"></div>
+
+				<div class="card" id="card9"></div>
 			</section>
 		</div>
-		<div id="button-container">
+
+		<!-- Jag kommenterade ut koden nedan eftersom den inte fungerar tillsammans med css och html
+		Mer info om det finns i dokumentationen -->
+		<!-- <div id="button-container">
 			<button class="gallery-button" data-gallery="gallery1">Gallery 1</button>
 			<button class="gallery-button" data-gallery="gallery2">Gallery 2</button>
 			<button class="gallery-button" data-gallery="gallery3">Gallery 3</button>
-		</div>
-	</main>
+		</div> -->
+
+	</section>
+
+	<footer>
+        <div>
+            <p class="text_footer">Contact::</p>
+            <p class="text_footer">Adress: Origovägen 4 Göteborg</p>
+            <p class="text_footer">Telefon: 0731 555 559</p>
+            <p class="text_footer">Mail: SamuelNilsson@gmail.com</p>
+            <a href="contact.html"><p class="text_footer">Press here to read more.</p></a>
+        </div>
+        <div>
+            <p class="text_footer">My working hours:</p>
+            <p class="text_footer">Monday, Tuesday: 09-16</p>
+            <p class="text_footer">Wednesday, Thursday: 10-17</p>
+            <p class="text_footer">Friday, Saturday: 09-15</p>
+            <p class="text_footer">Sunday: Off-hour</p>
+        </div>
+    </footer> 
+
 	<script src="/js/script.js"></script>
     
 </body>

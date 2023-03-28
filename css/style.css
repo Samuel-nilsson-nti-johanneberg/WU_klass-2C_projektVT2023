@@ -7,18 +7,19 @@
 body {
   font-family: Arial, sans-serif;
   background-color: aliceblue;
+  overflow-x: hidden;
 }
   
 header{
   grid-area: he;
   background-color: #bae3cd;
-  height: 100px;
+  height: 0px;
   width: 100%;
 }
   
 h1 {
   text-align: center;
-  color: #333;
+  color: #000000;
 }
   
 nav{
@@ -26,7 +27,7 @@ nav{
   padding: 2% 6%;
   justify-content: flex-end;
   align-items: center;
-  background-color: lightseagreen;
+  background-color: rgb(0, 0, 0);
   grid-area: na;
 }
   
@@ -34,7 +35,7 @@ nav{
   flex: 1;
   text-align: right;
 
-  background-color: lightseagreen;
+  background-color: rgb(0, 0, 0);
   height: 400px;
   width: 200px;
   position: absolute;
@@ -100,7 +101,8 @@ nav{
 
 .link_list_visible {
   transform: translateX(-200px);
-  background-image: url(/img/colorshift.gif);
+  /* background-image: url(/img/colorshift.gif);
+  opacity: 0.5; */
   background-size: cover;
 }
 
@@ -128,7 +130,7 @@ nav{
   "m3 m4"
   "fo fo";
 
-  background-color: #bae3cd;
+  background-color: #f3fff9;
 }
 
 #mainpage_area1 {
@@ -138,11 +140,12 @@ nav{
   align-items: center;
   justify-content: center;
 
-  background-image: url('/img/Norrsken1.jpg');
+  background-image: url('/img/camera2_unsplash.jpg');
   background-size: cover;
   background-position-y: center;
+  background-position: center;
 
-  height: 600px;
+  height: 80vh;
   width: auto;
 }
 
@@ -207,7 +210,7 @@ nav{
   align-items: center;
   justify-content: center;
 
-  background-image: url('/img/Fjord1.jpg');
+  background-image: url('/img/mountain1_unpslash.jpg');
   background-size: cover;
   background-position-y: center;
 
@@ -294,19 +297,30 @@ input[type="submit"]:hover {
   "fo";
 }
 
+
 #contact_section1 {
   grid-area: ma;
   display: grid;
   justify-content: center;
   align-items: center;
  
-  background-image: url('../img/tim.jpg');
+  background-image: url('../img/forest2_unsplash.jpg');
   background-position: center;
   background-size: cover;
   position: relative;
   
   height: 80vh;
   width: 100%;
+}
+
+#h1_fixed_position {
+  position: relative;
+  top: 40%;
+}
+
+#h1_contact_section1 {
+  font-size: 40px;
+  color: white;
 }
 
 #contact_section2 {
@@ -333,13 +347,13 @@ input[type="submit"]:hover {
   display: grid;
   
   grid-template-rows: 100px 800px 800px 800px minmax(400px, 1fr);
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas: 
-  "he he"
-  "ma ma"
-  "a1 a1"
-  "a2 a2"
-  "fo fo";
+  "he"
+  "ma"
+  "a1"
+  "a2"
+  "fo";
 }
    
 .boxed {
@@ -370,7 +384,6 @@ input[type="submit"]:hover {
   background-size: cover;
   position: relative;
     
-  height: 80vh;
   width: 100%;
 }
   
@@ -385,7 +398,6 @@ input[type="submit"]:hover {
   justify-content: center;
   align-items: center;  
   
-  height: 80vh;
   width: auto;
 }
   
@@ -400,7 +412,6 @@ input[type="submit"]:hover {
   justify-content: center;
   align-items: center; 
   
-  height: 80vh;
   width: auto;
 }
   
@@ -454,7 +465,7 @@ footer {
   display: block;
   width: 32px;
   height: 32px;
-  border: 3px solid rgb(0, 0, 0);
+  border: 3px solid rgb(255, 255, 255);
   background-size: 14px auto;
   border-radius: 50%;
   z-index: 2;
@@ -473,7 +484,7 @@ footer {
   width: 12px;
   height: 12px;
   content: "";
-  border: 3px solid rgb(0, 0, 0);
+  border: 3px solid rgb(255, 255, 255);
   border-width: 0px 0 2px 2px;
 }
 
@@ -502,8 +513,31 @@ footer {
 }
 
 
+/* Här är koden till portfolio sidan */
+
+#portfolio_gridwrapper {
+  height: 100vh;
+  display: grid;
+  
+  grid-template-rows: 100px 500px minmax(180vh, 200vh) minmax(400px, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "he"
+  "p1"
+  "p2"
+  "fo";
+}
+
+#gallery_section {
+  grid-area: p2;
+}
+
 
 /* Här nedan kommer koden kopplad till slideshowen på portfoliosidan */
+
+.slideshow {
+  grid-area: p1;
+}
 
 .slideshow-container {
   position: relative;
@@ -526,19 +560,19 @@ footer {
 }
   
 .slide1 {
-  background-image: url('/img/tim.jpg');
+  background-image: url('/img/mountain1_unpslash.jpg');
 }
   
 .slide2 {
-  background-image: url('/img/jimmy.jpg');
+  background-image: url('/img/forest1_unsplash.jpg');
 }
   
 .slide3 {
-  background-image: url('/img/gamledstad.jpg');
+  background-image: url('/img/forest2_unsplash.jpg');
 }
   
 .slide4 {
-  background-image: url('/img/äggmacka.jpg');
+  background-image: url('/img/fjord3_unsplash.jpg');
 }
   
 .slide5 {
@@ -584,7 +618,7 @@ footer {
 }
   
 
-/* Här nedanför kommer koden kopplad till de olika gallerien på portfoliosidan */
+/* Här nedanför kommer koden kopplad till galleriet på portfoliosidan */
 
 body {
 	font-family: Arial, sans-serif;
@@ -596,6 +630,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+  margin: 10vh;
 }
 
 .card {
@@ -608,9 +643,12 @@ body {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.card img {
-	width: 100%;
-	height: auto;
+
+.card {
+  width: 50vh;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
 }
 
 @media screen and (max-width: 600px) {
@@ -619,8 +657,46 @@ body {
 	}
 }
 
+#card1{
+  background-image: url(/img/forest1_unsplash.jpg);
+}
+
+#card2{
+  background-image: url(/img/forest2_unsplash.jpg);
+}
+
+#card3{
+  background-image: url(/img/Vattenfall.jpeg);
+}
+
+#card4{
+  background-image: url(/img/mountain2_unsplash.jpg);
+}
+
+#card5{
+  background-image: url(/img/mounatain3_unsplash.jpg);
+}
+
+#card6{
+  background-image: url(/img/mountain1_unpslash.jpg);
+}
+
+#card7{
+  background-image: url(/img/Norrsken1.jpg);
+}
+
+#card8{
+  background-image: url(/img/Fjord1.jpg);
+}
+
+#card9{
+  background-image: url(/img/Norrsken1.jpg);
+}
+
+/* Jag kommenterade ut denna koden eftersom den är kopplad till galleriswitch knappen som inte fungerar. Mer info finns i dokumentationen. */
 /* Button styles */
-#button-container {
+
+/* #button-container {
 	display: flex;
 	justify-content: center;
 	margin-top: 20px;
@@ -635,13 +711,8 @@ body {
 	border-radius: 5px;
 	cursor: pointer;
 	transition: background-color 0.3s ease-in-out;
-}
+} 
 
 .gallery-button:hover {
 	background-color: #0056b3;
-}
-
-.card img {
-  max-width: 400px;
-  max-height: 400px;
-}
+} */
