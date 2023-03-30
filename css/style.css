@@ -30,6 +30,10 @@ nav{
   background-color: rgb(0, 0, 0);
   grid-area: na;
 }
+
+nav h1{
+  color: #bebebe;
+}
   
 #link_list{
   flex: 1;
@@ -39,7 +43,7 @@ nav{
   height: 400px;
   width: 200px;
   position: absolute;
-  top: 100px;
+  top: 10vh;
   right: -200px;
   display: flex;
   flex-direction: column;
@@ -307,7 +311,7 @@ input[type="submit"]:hover {
   height: 100vh;
   display: grid;
 
-  grid-template-rows: 100px 80vh 80vh minmax(400px, 1fr);
+  grid-template-rows: minmax(11vh, auto) 80vh 80vh minmax(400px, 1fr);
   grid-template-columns: 1fr;
   grid-template-areas: 
   "he"
