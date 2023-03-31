@@ -12,7 +12,7 @@ body {
   
 header{
   grid-area: he;
-  background-color: #bae3cd;
+  background-color: #000000;
   height: 0px;
   width: 100%;
 }
@@ -29,10 +29,20 @@ nav{
   align-items: center;
   background-color: rgb(0, 0, 0);
   grid-area: na;
+  width: 1fr;
 }
 
 nav h1{
   color: #bebebe;
+  position: absolute;
+  left: 14vh;
+}
+
+#logo { 
+  height: 7vh;
+  width: 7vh;
+  position: absolute;
+  left: 3vh;
 }
   
 #link_list{
@@ -92,7 +102,7 @@ nav h1{
 #burger div {
   width: 25px;
   height: 3px;
-  background-color: darkgreen;
+  background-color: rgb(1, 166, 1);
   margin: 5px;
   border-radius: 20%;
   transition: all 0.5s;
@@ -311,7 +321,7 @@ input[type="submit"]:hover {
   height: 100vh;
   display: grid;
 
-  grid-template-rows: minmax(11vh, auto) 80vh 80vh minmax(400px, 1fr);
+  grid-template-rows: 11vh 80vh 80vh minmax(400px, 1fr);
   grid-template-columns: 1fr;
   grid-template-areas: 
   "he"
@@ -369,7 +379,7 @@ input[type="submit"]:hover {
   /* height: 100vh; */
   display: grid;
   
-  grid-template-rows: 100px 90vh 80vh 80vh minmax(20vh, 1fr);
+  grid-template-rows: 11vh 90vh 80vh 80vh minmax(20vh, 1fr);
   grid-template-columns: 1fr;
   grid-template-areas: 
   "he"
@@ -815,7 +825,7 @@ body {
   nav{
     display: flex;
     padding: 2% 6%;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0);
     grid-area: na;
@@ -828,7 +838,9 @@ body {
     background-color: rgb(0, 0, 0);
     height: 0px;
     width: 0px;
-    position: sticky;
+    position: relative;
+    right: 0vh;
+
    
     display: flex;
     flex-direction: row;
