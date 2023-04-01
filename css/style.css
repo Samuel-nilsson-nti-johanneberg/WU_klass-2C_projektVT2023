@@ -857,6 +857,8 @@ body {
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 1,25rem;
+    position: relative;
+    bottom: 2vh;
   
     letter-spacing: 0.1875rem;
     color: rgb(255, 128, 0);
@@ -865,6 +867,22 @@ body {
   #burger div {
     display: none;
   }
+
+  nav h1{
+    color: #bebebe;
+    position: absolute;
+    left: 14vh;
+    top: 1.5vh;
+  }
+  
+  #logo { 
+    height: 6vh;
+    width: 6vh;
+    position: absolute;
+    left: 3vh;
+    top: 1vh;
+  }
+
   
 /* Övrigt */
 
