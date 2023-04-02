@@ -33,7 +33,7 @@ nav{
 }
 
 nav h1 {
-  color: #bebebe;
+  color: #c6c6c6;
   position: absolute;
   left: 13vh;
   top: 4vh;
@@ -144,7 +144,7 @@ nav h1 {
 
 #gridwrapper1 {
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 500px 800px 800px 800px 800px 500px;
+  grid-template-rows: 0px 800px 800px 800px 800px 500px;
   grid-template-areas: 
   "na na"
   "m1 m1"
@@ -187,7 +187,7 @@ nav h1 {
   padding: 40px;
 }
 
-#text_buttons_h1 {
+#text_buttons_h2 {
   font-size: 40px;
   color: #fff;
   padding: 10px;
@@ -466,7 +466,7 @@ p {
   
 footer {
   grid-area: fo;
-  height: 20vh;
+  height: 25vh;
   background-color: rgb(0, 0, 0); 
   display: flex;
   flex-direction: row;
@@ -601,7 +601,7 @@ footer {
 }
   
 .slide1 {
-  background-image: url('/img/mountain1_unpslash.jpg');
+  background-image: url('/img/mountain1_unsplash.jpg');
 }
   
 .slide2 {
@@ -719,19 +719,19 @@ body {
 }
 
 #card6{
-  background-image: url(/img/mountain1_unpslash.jpg);
-}
-
-#card7{
-  background-image: url(/img/Norrsken1.jpg);
-}
-
-#card8{
   background-image: url(/img/Fjord1.jpg);
 }
 
-#card9{
+#card7{
+  background-image: url(/img/mountain1_unsplash.jpg);
+}
+
+#card8{
   background-image: url(/img/Norrsken1.jpg);
+}
+
+#card9{
+  background-image: url(/img/fjord6_unsplash.jpg);
 }
 
 /* Jag kommenterade ut denna koden eftersom den är kopplad till galleriswitch knappen som inte fungerar. Mer info finns i dokumentationen. */
@@ -871,6 +871,12 @@ body {
   
     letter-spacing: 0.1875rem;
     color: rgb(255, 128, 0);
+  }
+
+  #link_list li::after{
+    content: '';
+    width: 0%;
+    height: 0px;
   }
   
   #burger div {
