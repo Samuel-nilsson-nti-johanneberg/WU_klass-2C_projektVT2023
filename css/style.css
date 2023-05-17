@@ -162,7 +162,7 @@ nav h1 {
   align-items: center;
   justify-content: center;
 
-  background-image: url('/img/camera1_unsplash.jpg');
+  background-image: url('../img/camera1_unsplash.jpg');
   background-size: cover;
   background-position-y: center;
   background-position: center;
@@ -233,15 +233,15 @@ nav h1 {
 }
 
 #mainpage_area2_img1 {
-  background-image: url(/img/mountain3_unsplash.jpg);
+  background-image: url('../img/mountain3_unsplash.jpg');
 }
 
 #mainpage_area2_img2 {
-  background-image: url(/img/fjord3_unsplash.jpg);
+  background-image: url('../img/fjord3_unsplash.jpg');
 }
 
 #mainpage_area2_img3 {
-  background-image: url(/img/fjord5_unsplash.jpg);
+  background-image: url('../img/fjord5_unsplash.jpg');
 }
 
 #mainpage_area3 {
@@ -251,7 +251,7 @@ nav h1 {
   align-items: center;
   justify-content: center;
 
-  background-image: url('/img/mountain1_unsplash.jpg');
+  background-image: url('../img/mountain1_unsplash.jpg');
   background-size: cover;
   background-position-y: center;
 
@@ -266,7 +266,7 @@ nav h1 {
   align-items: center;
   justify-content: center;
 
-  background-image: url('/img/Vattenfall.jpeg');
+  background-image: url('../img/Vattenfall.jpeg');
   background-size: cover;
   background-position-y: center;
 
@@ -601,23 +601,23 @@ footer {
 }
   
 .slide1 {
-  background-image: url('/img/mountain1_unsplash.jpg');
+  background-image: url('../img/mountain1_unsplash.jpg');
 }
   
 .slide2 {
-  background-image: url('/img/forest1_unsplash.jpg');
+  background-image: url('../img/forest1_unsplash.jpg');
 }
   
 .slide3 {
-  background-image: url('/img/forest2_unsplash.jpg');
+  background-image: url('../img/forest2_unsplash.jpg');
 }
   
 .slide4 {
-  background-image: url('/img/fjord3_unsplash.jpg');
+  background-image: url('../img/fjord3_unsplash.jpg');
 }
   
 .slide5 {
-  background-image: url('/img/Vattenfall.jpeg');
+  background-image: url('../img/Vattenfall.jpeg');
 }
   
 .slide.active {
@@ -699,39 +699,39 @@ body {
 }
 
 #card1{
-  background-image: url(/img/forest1_unsplash.jpg);
+  background-image: url('../img/forest1_unsplash.jpg');
 }
 
 #card2{
-  background-image: url(/img/forest2_unsplash.jpg);
+  background-image: url('../img/forest2_unsplash.jpg');
 }
 
 #card3{
-  background-image: url(/img/Vattenfall.jpeg);
+  background-image: url('../img/Vattenfall.jpeg');
 }
 
 #card4{
-  background-image: url(/img/mountain2_unsplash.jpg);
+  background-image: url('../img/mountain2_unsplash.jpg');
 }
 
 #card5{
-  background-image: url(/img/mountain3_unsplash.jpg);
+  background-image: url('../img/mountain3_unsplash.jpg');
 }
 
 #card6{
-  background-image: url(/img/Fjord1.jpg);
+  background-image: url('../img/Fjord1.jpg');
 }
 
 #card7{
-  background-image: url(/img/mountain1_unsplash.jpg);
+  background-image: url('../img/mountain1_unsplash.jpg');
 }
 
 #card8{
-  background-image: url(/img/Norrsken1.jpg);
+  background-image: url('../img/Norrsken1.jpg');
 }
 
 #card9{
-  background-image: url(/img/fjord6_unsplash.jpg);
+  background-image: url('../img/fjord6_unsplash.jpg');
 }
 
 /* Jag kommenterade ut denna koden eftersom den är kopplad till galleriswitch knappen som inte fungerar. Mer info finns i dokumentationen. */
