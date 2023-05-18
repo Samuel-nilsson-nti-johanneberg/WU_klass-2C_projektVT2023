@@ -9,12 +9,17 @@ function toggleMenu() {
 
 burger.addEventListener('click', toggleMenu)
 
+// Kod som behövs för att hamburgaren ska fungera på mobillayouten
+// linkList.classList.add('link_list_hidden');
+
+// burger.addEventListener('click', toggleMenu);
 
 
 // Här kommer koden till bildspelet på contact-sidan
 
 var slides = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'];
 var currentSlide = 0;
+var slideInterval;
 
 function nextSlide() {
   var slide = document.getElementsByClassName('slide')[currentSlide];
@@ -32,7 +37,20 @@ function prevSlide() {
   slide.classList.add('active');
 }
 
-var slideInterval = setInterval(nextSlide, 4000);
+function startSlideInterval() {
+  slideInterval = setInterval(nextSlide, 4000);
+}
+
+function stopSlideInterval() {
+  clearInterval(slideInterval);
+}
+
+nextSlide();
+
+document.getElementById('nextButton').addEventListener('click', nextSlide);
+document.getElementById('prevButton').addEventListener('click', prevSlide);
+document.addEventListener('DOMContentLoaded', startSlideInterval);
+
 
 
 // Jag valde att spara koden nedanför men att kommentera ut den. Koden fungerar inte och jag hinner inte fixa den.
