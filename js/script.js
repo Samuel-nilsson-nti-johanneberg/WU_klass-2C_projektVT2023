@@ -9,11 +9,6 @@ function toggleMenu() {
 
 burger.addEventListener('click', toggleMenu)
 
-// Kod som behövs för att hamburgaren ska fungera på mobillayouten
-// linkList.classList.add('link_list_hidden');
-
-// burger.addEventListener('click', toggleMenu);
-
 
 // Här kommer koden till bildspelet på contact-sidan
 
