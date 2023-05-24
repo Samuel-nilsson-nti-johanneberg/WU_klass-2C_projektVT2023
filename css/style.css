@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   background-repeat: no-repeat;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
   background-color: aliceblue;
   overflow-x: hidden;
 }
@@ -144,12 +144,14 @@ nav h1 {
 
 #gridwrapper1 {
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0px 800px 800px 800px 800px 500px;
+  grid-template-rows: 0px 800px 800px 800px 800px 800px 500px;
   grid-template-areas: 
   "na na"
   "m1 m1"
   "m2 m2"
-  "m3 m3"
+  /* "m3 m3" */
+  "m4 m4"
+  "m5 m5"
   "fo fo";
 
   background-color: #fffcf1;
@@ -274,6 +276,59 @@ nav h1 {
   width: auto;
 }
 
+.boxed_card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.749);
+  padding: 10vh;
+  height: 5rem;
+  width: auto;
+}
+
+#mainpage_cardlayout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: m5;
+  background-image: url('../img/mountain1_unsplash.jpg');
+  background-size: cover;
+}
+
+.mainpage_cardimg {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.mainpage_card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+
+  height: auto;
+  width: 400px;
+  padding: 1vh;
+  margin: 6vh;
+}
+  
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
+  
+.container {
+  padding: 2px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -363,6 +418,12 @@ input[type="submit"]:hover {
   font-size: 40px;
   color: white;
 }
+
+
+
+
+
+
 
 #contact_section2 {
   grid-area: a1;
@@ -769,15 +830,24 @@ body {
 
   #gridwrapper1 {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 800px 800px 800px 800px 500px;
+    grid-template-rows: 100px 800px 800px 800px 800px 800px 500px;
     grid-template-areas: 
     "na na"
     "m1 m1"
-    "m2 m2"
     "m3 m3"
+    "m5 m5"
+    "m4 m4"
     "fo fo";
 
     background-color: #fffcf1;
+  }
+
+  #mainpage_area2 {
+    display: none;
+  }
+
+  #mainpage_card_remove {
+    display: none;
   }
 
   #contact_gridwrapper{
