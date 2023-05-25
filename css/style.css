@@ -998,5 +998,11 @@ body {
   font-size: 8vh;
   white-space: nowrap;
 }
+
+  footer {
+    flex-direction: column;
+    height: 50vh;
+    padding-left: 5vh;
+  }
   
 }
