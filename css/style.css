@@ -122,7 +122,7 @@ nav h1 {
   transform: translateX(-200px);
   /* background-image: url(/img/colorshift.gif);
   opacity: 0.5; */
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 .burger_in_x_form #burger_line_2 {
@@ -284,7 +284,7 @@ nav h1 {
   align-items: center;
 
   border: 2px solid white;
-  background-color: rgba(255, 255, 255, 0.749);
+  background-color: rgb(255, 255, 255);
   padding: 10vh;
   height: 5rem;
   width: auto;
@@ -311,6 +311,7 @@ nav h1 {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px;
+  background-color: #ffffffb8;
 
   height: auto;
   width: 400px;
@@ -318,11 +319,11 @@ nav h1 {
   margin: 6vh;
 }
   
-.card:hover {
+.mainpage_card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
 }
   
-.container {
+.container_card {
   padding: 2px 16px;
   display: flex;
   flex-direction: column;
@@ -846,7 +847,7 @@ body {
     display: none;
   }
 
-  #mainpage_card_remove {
+  .mainpage_card_remove {
     display: none;
   }
 
@@ -891,9 +892,7 @@ body {
   }
 
 
-  /* Ta bort hamburgarmenyn och gör om den till en meny längst upp på skärmen */
-
-  /* header{
+  header{
     grid-area: he;
     background-color: #000000;
     height: 100px;
@@ -907,29 +906,31 @@ body {
     align-items: center;
     background-color: rgb(0, 0, 0);
     grid-area: na;
-  } */
+  }
     
+
   #link_list{
     flex: 1;
     text-align: center;
   
     background-color: rgb(0, 0, 0, 0.9);
     height: 100vh;
+    right: -800px;
     width: 100%;
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 0;
     box-sizing: border-box;
 
-   
- 
+    transform: translateX(100%);
+    opacity: 1;
     z-index: 2;
+    overflow-x: hidden;
     
     white-space: nowrap;
     transition: transform 0.5s;
-
   }
-  
+/*   
   #link_list li {
     display: block;
     padding: 15px;
@@ -940,7 +941,7 @@ body {
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 1rem;
-    /* position: relative; */
+
     bottom: 2vh;
   
     letter-spacing: 0.1875rem;
@@ -950,12 +951,15 @@ body {
 
   #link_list li::after{
    opacity: 1;
-  }
+  } */
   
   .link_list_visible {
-    transform: translateX(0);
     opacity: 1;
-    display: block;
+    transform: translateX(-800px);
+  }
+
+  /* .burger_in_x_form {
+    z-index: 3;
   }
 
   .burger_in_x_form #burger_line_1 {
@@ -972,7 +976,7 @@ body {
 
   .button a{
     white-space: nowrap;
-  }
+  } */
 
 
   nav h1{
@@ -992,17 +996,89 @@ body {
   }
 
   
+  #burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(1, 166, 1);
+    margin: 5px;
+    border-radius: 20%;
+    transition: all 0.5s;
+  }
+
+  #burger {
+    margin-right: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: 2.5vh;
+    right: -1vh;
+  }
+
+  
 /* Övrigt */
 
-#portfolio_h2 {
-  font-size: 8vh;
-  white-space: nowrap;
-}
+  #portfolio_h2 {
+    font-size: 8vh;
+    white-space: nowrap;
+  }
 
   footer {
     flex-direction: column;
-    height: 50vh;
+    height: 60vh;
     padding-left: 5vh;
   }
   
 }
+
+
+
+
+    
+/*   
+
+
+#link_list{
+  
+  right: -200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+#link_list li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+  
+#link_list li a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1rem;
+
+  letter-spacing: 0.1875rem;
+  color: rgb(255, 128, 0);
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+}
+  
+#link_list li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: red;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+  
+#link_list li:hover::after{
+  width: 100%;
+}
+
+
