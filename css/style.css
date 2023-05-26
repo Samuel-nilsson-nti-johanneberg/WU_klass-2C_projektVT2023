@@ -63,7 +63,7 @@ nav h1 {
   justify-content: space-around;
   list-style: none;
   transition: all 0.5s;
-  z-index: 1;
+  z-index: 3;
 }
     
   
