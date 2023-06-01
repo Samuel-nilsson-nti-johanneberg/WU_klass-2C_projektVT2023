@@ -42,10 +42,9 @@ function stopSlideInterval() {
 
 nextSlide();
 
-document.getElementById('nextButton').addEventListener('click', nextSlide);
-document.getElementById('prevButton').addEventListener('click', prevSlide);
+document.getElementById('next_slide').addEventListener('click', nextSlide);
+document.getElementById('previous_slide').addEventListener('click', prevSlide);
 document.addEventListener('DOMContentLoaded', startSlideInterval);
-
 
 
 // Jag valde att spara koden nedanför men att kommentera ut den. Koden fungerar inte och jag hinner inte fixa den.

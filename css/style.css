@@ -827,10 +827,11 @@ body {
 
 @media only screen and (max-width: 800px) {
   
-/* Småändringar i gridwrappers för att mobilanpassa sidan */
+/* Ändringar i gridwrappers för att mobilanpassa sidan */
 
   * {
     z-index: 2;
+    overflow-x: hidden;
   }
 
   #gridwrapper1 {
@@ -925,61 +926,16 @@ body {
     top: 0;
     box-sizing: border-box;
 
-    /* transform: translateX(100%); */
-    /* opacity: 100%;
-    z-index: 1; */
     overflow-x: hidden;
-    
     white-space: nowrap;
     transition: transform 0.5s;
   }
-/*   
-  #link_list li {
-    display: block;
-    padding: 15px;
-    text-align: center;
-  }
 
-  #link_list li a{
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 1rem;
-
-    bottom: 2vh;
-  
-    letter-spacing: 0.1875rem;
-    color: rgb(255, 128, 0);
-    display: block;
-  }
-
-  #link_list li::after{
-   opacity: 1;
-  } */
   
   .link_list_visible {
     transform: translateX(-800px);
     z-index: 3;
   }
-
-  /* .burger_in_x_form {
-    z-index: 3;
-  }
-
-  .burger_in_x_form #burger_line_1 {
-    transform: rotate(45deg) translate(-2px, 5px);
-  }
-
-  .burger_in_x_form #burger_line_2 {
-    opacity: 0;
-  }
-
-  .burger_in_x_form #burger_line_3 {
-    transform: rotate(-45deg) translate(-2px, -5px);
-  }
-
-  .button a{
-    white-space: nowrap;
-  } */
 
 
   nav h1{
