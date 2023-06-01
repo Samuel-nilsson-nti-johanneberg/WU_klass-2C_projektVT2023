@@ -151,7 +151,6 @@ nav h1 {
   "na na"
   "m1 m1"
   "m2 m2"
-  /* "m3 m3" */
   "m4 m4"
   "m5 m5"
   "fo fo";
@@ -927,7 +926,7 @@ body {
     grid-area: he;
     background-color: #000000;
     height: 100px;
-    width: 100%;
+    width: 103%;
   }
     
   nav{
