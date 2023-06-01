@@ -57,14 +57,14 @@ nav h1 {
   height: 400px;
   width: 200px;
   position: absolute;
-  top: 10vh;
-  right: -200px;
+  top: -50vh;
+  right: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   list-style: none;
-  transition: all 0.5s;
+  transition: all 0.7s;
   z-index: 3;
 }
     
@@ -121,7 +121,7 @@ nav h1 {
 }
 
 .link_list_visible {
-  transform: translateX(-200px);
+  transform: translateY(60vh);
   /* background-image: url(/img/colorshift.gif);
   opacity: 0.5; */
   /* background-size: cover; */
